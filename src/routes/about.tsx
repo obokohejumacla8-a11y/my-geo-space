@@ -30,6 +30,34 @@ const skillGroups = [
   { label: "Analysis", items: ["MCDA", "AHP", "Network Optimization", "Asset Management"] },
 ];
 
+const certifications = [
+  {
+    title: "TechGeo Geospatial Certification Exam",
+    issuer: "TechGeo Mapping Academy",
+    date: "May 2026",
+    mode: "Online Assessment",
+    detail: "Score 85% (34/40) — GIS · Remote Sensing · Web Mapping · Spatial Analysis · GeoAI · Photogrammetry · Cartography",
+    credentialId: "TG-2026-SJ8KE3RS",
+    image: certTechgeo,
+  },
+  {
+    title: "GeoPNG Inaugural Congress",
+    issuer: "PNG University of Technology — School of Surveying & Land Studies",
+    date: "21–22 August 2025",
+    mode: "In-Person",
+    detail: "Active participation and contribution to the inaugural geospatial congress, themed 'Geospatial Solutions for a Sustainable Future'.",
+    image: certGeopng,
+  },
+  {
+    title: "WebGIS Ascension Workshop",
+    issuer: "WebGIS Ascension",
+    date: "17 July 2025",
+    mode: "Online",
+    detail: "Certificate of Completion — advanced WebGIS workflows and deployment.",
+    image: certWebgis,
+  },
+];
+
 function About() {
   return (
     <>
