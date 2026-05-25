@@ -106,6 +106,43 @@ function About() {
         </ol>
       </section>
 
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="flex items-end justify-between flex-wrap gap-4">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-widest text-primary">/ Credentials</p>
+            <h2 className="mt-2 font-display text-3xl font-semibold">Certifications & workshops</h2>
+          </div>
+          <p className="text-sm text-muted-foreground max-w-sm">
+            Continued professional development across geospatial assessment, WebGIS and community-level mapping.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {certifications.map((c) => (
+            <article key={c.title} className="surface-card overflow-hidden flex flex-col hover-lift">
+              <div className="aspect-[4/3] bg-muted border-b border-border overflow-hidden">
+                <img src={c.image} alt={`${c.title} certificate`} loading="lazy" className="h-full w-full object-cover" />
+              </div>
+              <div className="p-6 flex flex-col gap-3 flex-1">
+                <div className="flex items-center gap-2">
+                  <Award size={14} className="text-secondary" />
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-secondary">{c.mode} · {c.date}</span>
+                </div>
+                <h3 className="font-display text-lg font-semibold leading-snug">{c.title}</h3>
+                <p className="text-xs text-muted-foreground">{c.issuer}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{c.detail}</p>
+                {c.credentialId && (
+                  <p className="mt-auto pt-3 font-mono text-[10px] text-muted-foreground border-t border-border">
+                    ID: {c.credentialId}
+                  </p>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+
+
       <section className="mx-auto max-w-4xl px-6 py-20">
         <div className="surface-card p-10 md:p-14 text-center">
           <Quote className="mx-auto text-primary" size={28} />
