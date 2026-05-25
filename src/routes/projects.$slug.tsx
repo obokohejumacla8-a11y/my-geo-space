@@ -29,7 +29,8 @@ export const Route = createFileRoute("/projects/$slug")({
 });
 
 function ProjectDetail() {
-  const { project } = Route.useLoaderData();
+  const data = Route.useLoaderData() as { project: import("@/lib/projects").Project };
+  const { project } = data;
   const otherProjects = projects.filter((p) => p.slug !== project.slug).slice(0, 2);
 
   return (
