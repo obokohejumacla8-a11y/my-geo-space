@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Award, GraduationCap, Quote } from "lucide-react";
+import { Award, GraduationCap, Quote, FileText, ExternalLink, BookOpen } from "lucide-react";
 import certGeopng from "@/assets/cert-geopng.jpg";
 import certWebgis from "@/assets/cert-webgis.jpg";
 import certTechgeo from "@/assets/cert-techgeo.png";
+import profilePhoto from "@/assets/profile-hejumacla.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -61,18 +62,39 @@ const certifications = [
 function About() {
   return (
     <>
-      <section className="mx-auto max-w-5xl px-6 py-20">
+      <section className="mx-auto max-w-6xl px-6 py-20">
         <p className="font-mono text-xs uppercase tracking-widest text-primary">/ About</p>
-        <h1 className="mt-2 font-display text-4xl md:text-6xl font-semibold leading-[1.05]">
-          Building <span className="text-gradient">spatial intelligence</span> for Papua New Guinea.
-        </h1>
-        <p className="mt-8 text-lg leading-relaxed text-muted-foreground max-w-3xl">
-          I'm a results-oriented GIS professional with expertise in utilizing geospatial technologies to solve complex urban management, environmental, and agricultural challenges. My work spans WebGIS solutions for municipal asset management, advanced spatial analysis for groundwater resource assessment, and mobile data collection workflows for rural development.
-        </p>
-        <p className="mt-4 text-lg leading-relaxed text-muted-foreground max-w-3xl">
-          I'm committed to leveraging the Power of Where to advance the Sustainable Development Goals — across clean water, sustainable cities, gender equality and decent work.
-        </p>
+        <div className="mt-4 grid gap-10 md:grid-cols-[1fr_320px] items-start">
+          <div>
+            <h1 className="font-display text-4xl md:text-6xl font-semibold leading-[1.05]">
+              Building <span className="text-gradient">spatial intelligence</span> for Papua New Guinea.
+            </h1>
+            <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
+              I'm a results-oriented GIS professional with expertise in utilizing geospatial technologies to solve complex urban management, environmental, and agricultural challenges. My work spans WebGIS solutions for municipal asset management, advanced spatial analysis for groundwater resource assessment, and mobile data collection workflows for rural development.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              I'm committed to leveraging the Power of Where to advance the Sustainable Development Goals — across clean water, sustainable cities, gender equality and decent work.
+            </p>
+          </div>
+          <div className="relative md:sticky md:top-24">
+            <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-primary/30 via-secondary/20 to-transparent blur-2xl" aria-hidden />
+            <div className="relative surface-card overflow-hidden rounded-2xl">
+              <img
+                src={profilePhoto}
+                alt="Portrait of Hejumacla T. Oboko, GIS Specialist"
+                width={1024}
+                height={1280}
+                className="h-full w-full object-cover aspect-[4/5]"
+              />
+              <div className="p-5 border-t border-border">
+                <div className="font-display text-base font-semibold">Hejumacla T. Oboko</div>
+                <div className="font-mono text-[11px] uppercase tracking-widest text-primary mt-1">GIS Specialist · Lae, PNG</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
 
       <section className="mx-auto max-w-5xl px-6 py-10">
         <h2 className="font-display text-3xl font-semibold">Technical skills</h2>
@@ -104,6 +126,72 @@ function About() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="flex items-end justify-between flex-wrap gap-4">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-widest text-primary">/ Research</p>
+            <h2 className="mt-2 font-display text-3xl font-semibold">Publications & articles</h2>
+          </div>
+          <p className="text-sm text-muted-foreground max-w-sm">
+            Peer-reviewed research and theses contributing to geospatial science in Papua New Guinea.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <article className="surface-card p-7 hover-lift flex flex-col">
+            <div className="flex items-center gap-2">
+              <BookOpen size={14} className="text-secondary" />
+              <span className="font-mono text-[10px] uppercase tracking-widest text-secondary">Published · Journal Article</span>
+            </div>
+            <h3 className="mt-4 font-display text-xl font-semibold leading-snug">
+              Spatial Assessment of Groundwater Potential Zones of East New Britain Province, Papua New Guinea
+            </h3>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+              Undergraduate thesis research applying multi-criteria decision analysis (MCDA) and AHP-weighted remote sensing layers to delineate groundwater potential zones across East New Britain.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {["Groundwater", "Remote Sensing", "MCDA", "AHP"].map((t) => (
+                <span key={t} className="text-xs font-mono text-muted-foreground border border-border rounded px-2 py-1">{t}</span>
+              ))}
+            </div>
+            <p className="mt-5 font-mono text-[11px] text-muted-foreground">
+              PalArch's Journal of Archaeology of Egypt / Egyptology
+            </p>
+            <a
+              href="https://archives.palarch.nl/index.php/jae/article/view/7248"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto pt-5 inline-flex items-center gap-2 text-primary text-sm font-medium hover:gap-3 transition-all"
+            >
+              Read publication <ExternalLink size={14} />
+            </a>
+          </article>
+
+          <article className="surface-card p-7 hover-lift flex flex-col">
+            <div className="flex items-center gap-2">
+              <FileText size={14} className="text-secondary" />
+              <span className="font-mono text-[10px] uppercase tracking-widest text-secondary">Master's Thesis · 2025</span>
+            </div>
+            <h3 className="mt-4 font-display text-xl font-semibold leading-snug">
+              Integrating Web-Based GIS for Building and Land Asset Management System in Lae Urban Municipality
+            </h3>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+              Master of Philosophy research designing and deploying a production WebGIS platform for municipal property, infrastructure and land-asset management — combining spatial databases, dashboards and AI-assisted querying.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {["WebGIS", "Asset Management", "Mapbox", "Urban GIS"].map((t) => (
+                <span key={t} className="text-xs font-mono text-muted-foreground border border-border rounded px-2 py-1">{t}</span>
+              ))}
+            </div>
+            <p className="mt-5 font-mono text-[11px] text-muted-foreground">
+              PNG University of Technology — School of Surveying & Land Studies
+            </p>
+            <span className="mt-auto pt-5 inline-flex items-center gap-2 text-muted-foreground text-sm font-medium">
+              Available on request
+            </span>
+          </article>
+        </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-16">
