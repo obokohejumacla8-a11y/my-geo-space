@@ -131,6 +131,72 @@ function About() {
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex items-end justify-between flex-wrap gap-4">
           <div>
+            <p className="font-mono text-xs uppercase tracking-widest text-primary">/ Research</p>
+            <h2 className="mt-2 font-display text-3xl font-semibold">Publications & articles</h2>
+          </div>
+          <p className="text-sm text-muted-foreground max-w-sm">
+            Peer-reviewed research and theses contributing to geospatial science in Papua New Guinea.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <article className="surface-card p-7 hover-lift flex flex-col">
+            <div className="flex items-center gap-2">
+              <BookOpen size={14} className="text-secondary" />
+              <span className="font-mono text-[10px] uppercase tracking-widest text-secondary">Published · Journal Article</span>
+            </div>
+            <h3 className="mt-4 font-display text-xl font-semibold leading-snug">
+              Spatial Assessment of Groundwater Potential Zones of East New Britain Province, Papua New Guinea
+            </h3>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+              Undergraduate thesis research applying multi-criteria decision analysis (MCDA) and AHP-weighted remote sensing layers to delineate groundwater potential zones across East New Britain.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {["Groundwater", "Remote Sensing", "MCDA", "AHP"].map((t) => (
+                <span key={t} className="text-xs font-mono text-muted-foreground border border-border rounded px-2 py-1">{t}</span>
+              ))}
+            </div>
+            <p className="mt-5 font-mono text-[11px] text-muted-foreground">
+              PalArch's Journal of Archaeology of Egypt / Egyptology
+            </p>
+            <a
+              href="https://archives.palarch.nl/index.php/jae/article/view/7248"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto pt-5 inline-flex items-center gap-2 text-primary text-sm font-medium hover:gap-3 transition-all"
+            >
+              Read publication <ExternalLink size={14} />
+            </a>
+          </article>
+
+          <article className="surface-card p-7 hover-lift flex flex-col">
+            <div className="flex items-center gap-2">
+              <FileText size={14} className="text-secondary" />
+              <span className="font-mono text-[10px] uppercase tracking-widest text-secondary">Master's Thesis · 2025</span>
+            </div>
+            <h3 className="mt-4 font-display text-xl font-semibold leading-snug">
+              Integrating Web-Based GIS for Building and Land Asset Management System in Lae Urban Municipality
+            </h3>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+              Master of Philosophy research designing and deploying a production WebGIS platform for municipal property, infrastructure and land-asset management — combining spatial databases, dashboards and AI-assisted querying.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {["WebGIS", "Asset Management", "Mapbox", "Urban GIS"].map((t) => (
+                <span key={t} className="text-xs font-mono text-muted-foreground border border-border rounded px-2 py-1">{t}</span>
+              ))}
+            </div>
+            <p className="mt-5 font-mono text-[11px] text-muted-foreground">
+              PNG University of Technology — School of Surveying & Land Studies
+            </p>
+            <span className="mt-auto pt-5 inline-flex items-center gap-2 text-muted-foreground text-sm font-medium">
+              Available on request
+            </span>
+          </article>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="flex items-end justify-between flex-wrap gap-4">
+          <div>
             <p className="font-mono text-xs uppercase tracking-widest text-primary">/ Credentials</p>
             <h2 className="mt-2 font-display text-3xl font-semibold">Certifications & workshops</h2>
           </div>
