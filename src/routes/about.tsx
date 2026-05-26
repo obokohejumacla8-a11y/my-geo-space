@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Award, GraduationCap, Quote } from "lucide-react";
+import { Award, GraduationCap, Quote, FileText, ExternalLink, BookOpen } from "lucide-react";
 import certGeopng from "@/assets/cert-geopng.jpg";
 import certWebgis from "@/assets/cert-webgis.jpg";
 import certTechgeo from "@/assets/cert-techgeo.png";
+import profilePhoto from "@/assets/profile-hejumacla.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
