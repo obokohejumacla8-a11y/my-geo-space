@@ -19,6 +19,10 @@ import {
 import certGeopng from "@/assets/cert-geopng.jpg";
 import certWebgis from "@/assets/cert-webgis.jpg";
 import certTechgeo from "@/assets/cert-techgeo.png";
+import certMphil from "@/assets/cert-mphil.jpg";
+import certBachelor from "@/assets/cert-bachelor.jpg";
+import certApdit from "@/assets/cert-apdit.jpg";
+import certAssociate from "@/assets/cert-associate.jpg";
 import profilePhoto from "@/assets/profile-hejumacla.png";
 
 export const Route = createFileRoute("/about")({
@@ -102,6 +106,44 @@ const certifications: Certification[] = [
     detail: "Certificate of Completion — advanced WebGIS workflows and deployment.",
     url: "https://webgisascension.com",
     image: certWebgis,
+  },
+  {
+    title: "Master of Philosophy in Geomatics",
+    issuer: "PNG University of Technology",
+    date: "17 April 2026",
+    year: 2026,
+    mode: "In-Person",
+    detail: "Awarded by the Council of PNG Unitech — research focus on WebGIS for municipal building & land asset management.",
+    image: certMphil,
+  },
+  {
+    title: "Bachelor in Geographical Information Science (with Merit)",
+    issuer: "PNG University of Technology",
+    date: "3 April 2019",
+    year: 2019,
+    mode: "In-Person",
+    detail: "Four-year undergraduate degree in GIScience — graduated with Merit.",
+    image: certBachelor,
+  },
+  {
+    title: "Advanced Professional Diploma in Information Technology",
+    issuer: "PNG Unitech · DATEC Learning Centre",
+    date: "2011",
+    year: 2011,
+    mode: "In-Person",
+    detail: "One-year full-time advanced diploma — Permanent ID B00105.",
+    credentialId: "201112L053",
+    image: certApdit,
+  },
+  {
+    title: "Associate Diploma in Information Technology",
+    issuer: "DATEC Learning Centres",
+    date: "2 July 2011",
+    year: 2011,
+    mode: "In-Person",
+    detail: "One-year full-time foundation IT diploma — Permanent ID B00105.",
+    credentialId: "201102L006",
+    image: certAssociate,
   },
 ];
 

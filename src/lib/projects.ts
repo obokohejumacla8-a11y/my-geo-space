@@ -8,6 +8,10 @@ import geomorphology from "@/assets/project-geomorphology.jpg";
 import lulc from "@/assets/project-lulc.jpg";
 import ndvi from "@/assets/project-ndvi.jpg";
 import coffee from "@/assets/project-coffee.jpg";
+import clientDrainageBasin from "@/assets/client-drainage-basin.png";
+import clientDrainageNetwork from "@/assets/client-drainage-network.png";
+import clientNdvi from "@/assets/client-ndvi.png";
+import clientLocality from "@/assets/client-locality.png";
 
 export type Project = {
   slug: string;
@@ -26,6 +30,28 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "idam-siawi-spatial-assessment",
+    title: "Idam Siawi Area — Spatial Assessment",
+    subtitle: "Client cartography for logging concession monitoring",
+    location: "Sepik / Samaye River Basin, PNG",
+    cover: clientLocality,
+    tags: ["Cartography", "Hydrology", "NDVI", "Client Work"],
+    sdgs: ["SDG 13", "SDG 15"],
+    challenge:
+      "A client required a full cartographic baseline of the Idam Siawi area — including locality, drainage network, watershed sub-basins and vegetation cover — to monitor logging camp impact and oil-palm encroachment around the Sepik and Samaye Rivers.",
+    solution:
+      "Produced a four-map cartographic series in ArcGIS using USGS DEM and Landsat 9 imagery: a Locality Map (rivers, logging roads, oil-palm), a Drainage Network Map (extracted stream network), a Drainage Basin Map (Strahler stream orders 1–5 and sub-basins) and a Vegetation Cover Map (NDVI-derived dense/sparse/non-vegetative classes).",
+    impact:
+      "Delivered decision-ready cartographic products that pinpoint logging camps relative to watershed structure and forest cover — supporting environmental monitoring and community-impact reporting in remote Sepik catchments.",
+    tools: ["ArcGIS Pro", "Landsat 9", "USGS DEM", "Strahler Stream Order", "NDVI"],
+    gallery: [
+      { src: clientLocality, caption: "Locality Map — rivers, logging roads and oil-palm plantation context." },
+      { src: clientDrainageNetwork, caption: "Drainage Network Map — extracted stream orders over Landsat backdrop." },
+      { src: clientDrainageBasin, caption: "Drainage Basin Map — Strahler stream orders and sub-basin delineation." },
+      { src: clientNdvi, caption: "Vegetation cover (NDVI) — dense, sparse and non-vegetative classes." },
+    ],
+  },
   {
     slug: "webgis-municipal-asset-management",
     title: "WebGIS for Municipal Asset Management",

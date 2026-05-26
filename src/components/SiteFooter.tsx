@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -21,6 +21,14 @@ export function SiteFooter() {
           <Link to="/projects" className="text-muted-foreground hover:text-foreground">Projects</Link>
           <Link to="/about" className="text-muted-foreground hover:text-foreground">About</Link>
           <Link to="/contact" className="text-muted-foreground hover:text-foreground">Contact</Link>
+          <a
+            href="https://www.linkedin.com/in/hejumacla-oboko"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground"
+          >
+            <Linkedin size={14} className="text-primary" /> LinkedIn
+          </a>
         </div>
       </div>
       <div className="border-t border-border/60 py-5 text-center text-xs text-muted-foreground">
