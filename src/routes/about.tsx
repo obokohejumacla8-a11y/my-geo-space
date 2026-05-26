@@ -62,18 +62,39 @@ const certifications = [
 function About() {
   return (
     <>
-      <section className="mx-auto max-w-5xl px-6 py-20">
+      <section className="mx-auto max-w-6xl px-6 py-20">
         <p className="font-mono text-xs uppercase tracking-widest text-primary">/ About</p>
-        <h1 className="mt-2 font-display text-4xl md:text-6xl font-semibold leading-[1.05]">
-          Building <span className="text-gradient">spatial intelligence</span> for Papua New Guinea.
-        </h1>
-        <p className="mt-8 text-lg leading-relaxed text-muted-foreground max-w-3xl">
-          I'm a results-oriented GIS professional with expertise in utilizing geospatial technologies to solve complex urban management, environmental, and agricultural challenges. My work spans WebGIS solutions for municipal asset management, advanced spatial analysis for groundwater resource assessment, and mobile data collection workflows for rural development.
-        </p>
-        <p className="mt-4 text-lg leading-relaxed text-muted-foreground max-w-3xl">
-          I'm committed to leveraging the Power of Where to advance the Sustainable Development Goals — across clean water, sustainable cities, gender equality and decent work.
-        </p>
+        <div className="mt-4 grid gap-10 md:grid-cols-[1fr_320px] items-start">
+          <div>
+            <h1 className="font-display text-4xl md:text-6xl font-semibold leading-[1.05]">
+              Building <span className="text-gradient">spatial intelligence</span> for Papua New Guinea.
+            </h1>
+            <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
+              I'm a results-oriented GIS professional with expertise in utilizing geospatial technologies to solve complex urban management, environmental, and agricultural challenges. My work spans WebGIS solutions for municipal asset management, advanced spatial analysis for groundwater resource assessment, and mobile data collection workflows for rural development.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              I'm committed to leveraging the Power of Where to advance the Sustainable Development Goals — across clean water, sustainable cities, gender equality and decent work.
+            </p>
+          </div>
+          <div className="relative md:sticky md:top-24">
+            <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-primary/30 via-secondary/20 to-transparent blur-2xl" aria-hidden />
+            <div className="relative surface-card overflow-hidden rounded-2xl">
+              <img
+                src={profilePhoto}
+                alt="Portrait of Hejumacla T. Oboko, GIS Specialist"
+                width={1024}
+                height={1280}
+                className="h-full w-full object-cover aspect-[4/5]"
+              />
+              <div className="p-5 border-t border-border">
+                <div className="font-display text-base font-semibold">Hejumacla T. Oboko</div>
+                <div className="font-mono text-[11px] uppercase tracking-widest text-primary mt-1">GIS Specialist · Lae, PNG</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
 
       <section className="mx-auto max-w-5xl px-6 py-10">
         <h2 className="font-display text-3xl font-semibold">Technical skills</h2>
