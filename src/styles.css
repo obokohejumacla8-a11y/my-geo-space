@@ -96,3 +96,12 @@
   .hover-lift { transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease; }
   .hover-lift:hover { transform: translateY(-4px); border-color: var(--color-primary); box-shadow: 0 20px 60px -20px oklch(0.78 0.13 180 / 0.35); }
 }
+
+@media print {
+  .no-print { display: none !important; }
+  header, footer, nav { display: none !important; }
+  body { background: white !important; color: black !important; }
+  .surface-card { border: 1px solid #ddd !important; background: white !important; }
+  .text-gradient, .text-primary, .text-secondary, .text-muted-foreground { color: #222 !important; -webkit-text-fill-color: #222 !important; }
+  .print-area { break-inside: avoid; }
+}

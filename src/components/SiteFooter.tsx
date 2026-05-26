@@ -15,7 +15,7 @@ export function SiteFooter() {
         <div className="space-y-2 text-sm text-muted-foreground">
           <div className="flex items-start gap-2"><MapPin size={16} className="mt-0.5 text-primary" /> 4 Mile, Eagle Street, Stage 2, Lae, Morobe Province, PNG</div>
           <div className="flex items-center gap-2"><Phone size={16} className="text-primary" /> +675 7220 4015 · 8244 8573 · 7208 4084</div>
-          <div className="flex items-center gap-2"><Mail size={16} className="text-primary" /> oboko.hejumacla8@gmail.com</div>
+          <div className="flex items-center gap-2"><Mail size={16} className="text-primary" /><span>oboko.hejumacla8@gmail.com</span></div>
         </div>
         <div className="flex flex-col gap-2 text-sm">
           <Link to="/projects" className="text-muted-foreground hover:text-foreground">Projects</Link>
