@@ -65,7 +65,7 @@ export const projects: Project[] = [
     title: "WebGIS for Municipal Asset Management",
     subtitle: "Lae Urban Municipality — Ward 2",
     location: "Lae, Morobe Province, PNG",
-    cover: webgisDashboard,
+    cover: webgisMapView,
     tags: ["WebGIS", "Mapbox", "Supabase", "Dashboard"],
     sdgs: ["SDG 11", "SDG 12"],
     challenge:
@@ -77,10 +77,15 @@ export const projects: Project[] = [
     tools: ["WebGIS", "Mapbox GL", "Supabase", "PostgreSQL/PostGIS", "AI Analytics"],
     link: "https://www.laeurbanmunicipal.com/",
     gallery: [
-      { src: webgisDashboard, caption: "Municipal management dashboard — properties, payments and key metrics." },
-      { src: webgisDb, caption: "Integrated attribute table in Supabase PostgreSQL." },
-      { src: webgisQuery, caption: "Sample query result — property valuation by section." },
-      { src: webgisAi, caption: "AI-powered insight generation over the GIS dataset." },
+      { src: webgisMapView, caption: "Map View — property information panel, parcel layers and key metrics dashboard." },
+      { src: webgisQuery, caption: "Spatial query — properties by section visualised on the map and chart." },
+      { src: webgisLayersAnnotated, caption: "Annotated Map View — base layers, search, layer toggles and AI data analysis entry points." },
+      { src: webgisLayers, caption: "Parcel and building layers — Commercial, Residential, Public, Industrial and Reserved." },
+      { src: webgisDashboard, caption: "Municipal Data Dashboard — properties, tax revenue, ownership and land-use distribution." },
+      { src: webgisAi, caption: "Data Analysis with AI — suggested insight questions over the GIS dataset." },
+      { src: webgisDb, caption: "Supabase PostgreSQL attribute table backing the WebGIS." },
+      { src: webgisSchema, caption: "Relational schema — properties, owners, planning data and tax records." },
+      { src: webgisLogin, caption: "Secure login to the municipal management workspace." },
     ],
   },
   {
