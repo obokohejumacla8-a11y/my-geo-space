@@ -405,7 +405,7 @@ function ResumeSection() {
             <Briefcase size={18} className="text-primary" />
             <p className="font-mono text-xs uppercase tracking-widest text-primary">/ Resume</p>
           </div>
-          <h2 className="mt-3 font-display text-3xl font-semibold">Professional experience</h2>
+          <h2 className="mt-3 font-display text-3xl font-semibold">Professional GIS experience</h2>
         </div>
         <button
           onClick={handleDownload}
