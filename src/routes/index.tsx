@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, MapPin, Layers, Database, Satellite } from "lucide-react";
+import { ArrowRight, MapPin, Layers, Database, Satellite, Trees, Building2, Waves, ShieldCheck } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import pngLandscape from "@/assets/png-landscape.jpg";
 import { projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/")({
@@ -138,6 +139,49 @@ function Index() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* PNG Vision */}
+      <section className="relative overflow-hidden border-y border-border">
+        <img
+          src={pngLandscape}
+          alt="Aerial view of Papua New Guinea — rainforest mountains meeting the Pacific coastline"
+          width={1920}
+          height={1080}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-background/40" />
+        <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="max-w-2xl">
+            <p className="font-mono text-xs uppercase tracking-widest text-secondary">/ Papua New Guinea</p>
+            <h2 className="mt-3 font-display text-4xl md:text-5xl font-semibold leading-[1.1]">
+              Mapping a nation of <span className="text-gradient">extraordinary diversity</span>
+            </h2>
+            <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+              From the volcanic ridges of New Britain to the Sepik wetlands and the urban frontier of Lae —
+              Papua New Guinea is one of the most biologically and culturally rich landscapes on Earth.
+              Yet much of it remains under-mapped. GIS is how we close that gap, turning terrain, rivers,
+              villages and assets into the spatial intelligence our country needs to grow sustainably.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: Building2, title: "Smart municipalities", body: "WebGIS for land, property and revenue management in fast-growing urban centres." },
+              { icon: Trees, title: "Forest & land care", body: "Monitoring logging, oil-palm expansion and NDVI change to protect customary land." },
+              { icon: Waves, title: "Water & WaSH", body: "Mapping groundwater potential and rural water infrastructure for healthier communities." },
+              { icon: ShieldCheck, title: "Climate resilience", body: "Hazard, drainage and exposure mapping to prepare provinces for a changing climate." },
+            ].map(({ icon: Icon, title, body }) => (
+              <div key={title} className="surface-card p-6 hover-lift backdrop-blur-sm bg-card/70">
+                <Icon className="text-primary" size={22} />
+                <h3 className="mt-4 font-display text-lg font-semibold">{title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
