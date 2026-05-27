@@ -138,7 +138,7 @@ function ProjectDetail() {
             <Link key={p.slug} to="/projects/$slug" params={{ slug: p.slug }} className="surface-card overflow-hidden hover-lift group grid grid-cols-[120px_1fr]">
               <img src={p.cover} alt={p.title} loading="lazy" className="h-full w-full object-cover" />
               <div className="p-5">
-                <h4 className="font-display font-semibold">{p.title}</h4>
+                <h3 className="font-display font-semibold">{p.title}</h3>
                 <p className="mt-1 text-xs text-muted-foreground">{p.location}</p>
               </div>
             </Link>
