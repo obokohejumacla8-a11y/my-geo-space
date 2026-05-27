@@ -152,7 +152,7 @@ function ProjectDetail() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section>
-      <h3 className="font-display text-xl font-semibold border-l-2 border-primary pl-3">{title}</h3>
+      <h2 className="font-display text-xl font-semibold border-l-2 border-primary pl-3">{title}</h2>
       <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{children}</p>
     </section>
   );
