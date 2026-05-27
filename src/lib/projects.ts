@@ -116,6 +116,7 @@ export const projects: Project[] = [
     tools: ["ArcGIS", "QGIS", "CommCare", "Cloud Data Sync"],
     gallery: [
       { src: washDistricts, caption: "ELC PNG 17 districts — WaSH infrastructure overview." },
+      { src: washWaterScheme, caption: "Status of water scheme locations — improved vs unimproved sources across schools, health and community facilities. Improved: 47.2% · Unimproved: 52.8% — most facilities require maintenance, reconstruction or new water-source siting." },
     ],
   },
   {
