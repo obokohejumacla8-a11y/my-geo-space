@@ -1,4 +1,5 @@
 import webgisDashboard from "@/assets/webgis/08-dashboard.png";
+import webgisLive from "@/assets/webgis/00-laeurbanmunicipal-live.png";
 import webgisMapView from "@/assets/webgis/03-mapview-dashboard.png";
 import webgisQuery from "@/assets/webgis/01-property-query.png";
 import webgisLayersAnnotated from "@/assets/webgis/04-mapview-annotated.png";
