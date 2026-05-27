@@ -15,6 +15,8 @@ import {
   Mail,
   Phone,
   MapPin,
+  Rss,
+  CalendarDays,
 } from "lucide-react";
 import certGeopng from "@/assets/cert-geopng.jpg";
 import certWebgis from "@/assets/cert-webgis.jpg";
