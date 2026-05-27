@@ -8,6 +8,7 @@ import webgisDb from "@/assets/webgis/02-database.png";
 import webgisSchema from "@/assets/webgis/05-schema.png";
 import webgisLogin from "@/assets/webgis/10-login.png";
 import washDistricts from "@/assets/project-wash-districts.jpg";
+import washWaterScheme from "@/assets/wash-water-scheme-status.png";
 import gwPotentiality from "@/assets/groundwater/potentiality.png";
 import gwLithology from "@/assets/groundwater/lithology.png";
 import gwGeomorphology from "@/assets/groundwater/geomorphology.png";
