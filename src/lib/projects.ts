@@ -1,4 +1,5 @@
 import webgisDashboard from "@/assets/webgis/08-dashboard.png";
+import webgisLive from "@/assets/webgis/00-laeurbanmunicipal-live.png";
 import webgisMapView from "@/assets/webgis/03-mapview-dashboard.png";
 import webgisQuery from "@/assets/webgis/01-property-query.png";
 import webgisLayersAnnotated from "@/assets/webgis/04-mapview-annotated.png";
@@ -77,7 +78,7 @@ export const projects: Project[] = [
     title: "WebGIS for Municipal Asset Management",
     subtitle: "Lae Urban Municipality — Ward 2",
     location: "Lae, Morobe Province, PNG",
-    cover: webgisMapView,
+    cover: webgisLive,
     tags: ["WebGIS", "Mapbox", "Supabase", "Dashboard"],
     sdgs: ["SDG 11", "SDG 12"],
     challenge:
@@ -89,7 +90,10 @@ export const projects: Project[] = [
     tools: ["WebGIS", "Mapbox GL", "Supabase", "PostgreSQL/PostGIS", "AI Analytics"],
     link: "https://www.laeurbanmunicipal.com/",
     gallery: [
+      { src: webgisLive, caption: "Live deployment at laeurbanmunicipal.com — Map View with property classes, key metrics, payment status and properties by section." },
       { src: webgisMapView, caption: "Map View — property information panel, parcel layers and key metrics dashboard." },
+      { src: webgisQuery, caption: "Spatial query — properties by section visualised on the map and chart." },
+      { src: webgisLayersAnnotated, caption: "Annotated Map View — base layers, search, layer toggles and AI data analysis entry points." },
       { src: webgisQuery, caption: "Spatial query — properties by section visualised on the map and chart." },
       { src: webgisLayersAnnotated, caption: "Annotated Map View — base layers, search, layer toggles and AI data analysis entry points." },
       { src: webgisLayers, caption: "Parcel and building layers — Commercial, Residential, Public, Industrial and Reserved." },
