@@ -26,6 +26,7 @@ export type Project = {
   impact: string;
   tools: string[];
   link?: string;
+  metaDescription?: string;
   gallery: { src: string; caption: string }[];
 };
 
