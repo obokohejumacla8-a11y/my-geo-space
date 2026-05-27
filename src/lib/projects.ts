@@ -41,6 +41,8 @@ export const projects: Project[] = [
     sdgs: ["SDG 13", "SDG 15"],
     challenge:
       "A client required a full cartographic baseline of the Idam Siawi area — including locality, drainage network, watershed sub-basins and vegetation cover — to monitor logging camp impact and oil-palm encroachment around the Sepik and Samaye Rivers.",
+    metaDescription:
+      "Four-map cartographic series of the Idam Siawi area covering locality, drainage network, watershed sub-basins and NDVI vegetation cover.",
     solution:
       "Produced a four-map cartographic series in ArcGIS using USGS DEM and Landsat 9 imagery: a Locality Map (rivers, logging roads, oil-palm), a Drainage Network Map (extracted stream network), a Drainage Basin Map (Strahler stream orders 1–5 and sub-basins) and a Vegetation Cover Map (NDVI-derived dense/sparse/non-vegetative classes).",
     impact:
