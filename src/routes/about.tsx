@@ -443,9 +443,9 @@ function ResumeSection() {
             </div>
           </div>
           <div className="text-sm text-muted-foreground space-y-1.5">
-            <div className="flex items-center gap-2"><MapPin size={14} className="text-primary" /> Lae, Morobe Province, PNG</div>
-            <div className="flex items-center gap-2"><Mail size={14} className="text-primary" /> oboko.hejumacla8@gmail.com</div>
-            <div className="flex items-center gap-2"><Phone size={14} className="text-primary" /> +675 7220 4015</div>
+            <div className="flex items-center gap-2"><MapPin size={14} className="text-primary" />Lae, Morobe Province, PNG</div>
+            <div className="flex items-center gap-2"><Mail size={14} className="text-primary" />oboko.hejumacla8@gmail.com</div>
+            <div className="flex items-center gap-2"><Phone size={14} className="text-primary" />+675 7220 4015</div>
           </div>
         </div>
 
