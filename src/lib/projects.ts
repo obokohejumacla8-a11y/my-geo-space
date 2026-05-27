@@ -8,6 +8,7 @@ import webgisDb from "@/assets/webgis/02-database.png";
 import webgisSchema from "@/assets/webgis/05-schema.png";
 import webgisLogin from "@/assets/webgis/10-login.png";
 import washDistricts from "@/assets/project-wash-districts.jpg";
+import washWaterScheme from "@/assets/wash-water-scheme-status.png";
 import gwPotentiality from "@/assets/groundwater/potentiality.png";
 import gwLithology from "@/assets/groundwater/lithology.png";
 import gwGeomorphology from "@/assets/groundwater/geomorphology.png";
@@ -115,6 +116,7 @@ export const projects: Project[] = [
     tools: ["ArcGIS", "QGIS", "CommCare", "Cloud Data Sync"],
     gallery: [
       { src: washDistricts, caption: "ELC PNG 17 districts — WaSH infrastructure overview." },
+      { src: washWaterScheme, caption: "Status of water scheme locations — improved vs unimproved sources across schools, health and community facilities. Improved: 47.2% · Unimproved: 52.8% — most facilities require maintenance, reconstruction or new water-source siting." },
     ],
   },
   {
