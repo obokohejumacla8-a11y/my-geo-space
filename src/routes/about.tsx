@@ -567,3 +567,92 @@ function CertificationsSection() {
     </section>
   );
 }
+
+type BlogPost = {
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+  url?: string;
+};
+
+const blogPosts: BlogPost[] = [
+  {
+    title: "Why WebGIS is the missing layer in PNG's municipal reform",
+    excerpt:
+      "From Lae to Port Moresby, urban councils sit on decades of paper cadastres. Here's how a lightweight WebGIS unlocks revenue, planning and service delivery — without enterprise-scale budgets.",
+    date: "May 2026",
+    readTime: "6 min read",
+    tags: ["WebGIS", "Municipal", "Smart Cities"],
+  },
+  {
+    title: "Mapping groundwater potential with MCDA & AHP — a field-tested workflow",
+    excerpt:
+      "A walkthrough of the multi-criteria approach used across East New Britain: lithology, lineament density, slope, drainage, rainfall and LULC — weighted with AHP and validated against borehole yields.",
+    date: "March 2026",
+    readTime: "9 min read",
+    tags: ["Groundwater", "Remote Sensing", "MCDA"],
+  },
+  {
+    title: "Agentic GIS: when the map talks back",
+    excerpt:
+      "Large language models are quietly reshaping spatial analysis. A practical look at text-to-GIS, AI-assisted querying inside Mapbox dashboards, and what it means for non-technical decision-makers.",
+    date: "February 2026",
+    readTime: "7 min read",
+    tags: ["GeoAI", "LLM", "Mapbox"],
+  },
+  {
+    title: "NDVI for land-cover change in customary land contexts",
+    excerpt:
+      "Time-series NDVI tells a richer story than a single classification. Reflections on monitoring oil-palm expansion, logging concessions and garden food systems across Morobe and New Britain.",
+    date: "December 2025",
+    readTime: "5 min read",
+    tags: ["NDVI", "LULC", "Conservation"],
+  },
+];
+
+function BlogSection() {
+  return (
+    <section id="blog" className="mx-auto max-w-6xl px-6 py-16">
+      <div className="flex items-end justify-between flex-wrap gap-4">
+        <div>
+          <div className="flex items-center gap-3">
+            <Rss size={18} className="text-primary" />
+            <p className="font-mono text-xs uppercase tracking-widest text-primary">/ Blog</p>
+          </div>
+          <h2 className="mt-3 font-display text-3xl font-semibold">Field notes & essays</h2>
+        </div>
+        <p className="text-sm text-muted-foreground max-w-sm">
+          Short reads on WebGIS, remote sensing and applying spatial thinking to PNG's real problems.
+        </p>
+      </div>
+
+      <div className="mt-10 grid gap-6 md:grid-cols-2">
+        {blogPosts.map((post) => (
+          <article key={post.title} className="surface-card p-7 hover-lift flex flex-col">
+            <div className="flex items-center gap-3 text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest">
+                <CalendarDays size={12} /> {post.date}
+              </span>
+              <span className="font-mono text-[11px]">·</span>
+              <span className="font-mono text-[11px]">{post.readTime}</span>
+            </div>
+            <h3 className="mt-4 font-display text-xl font-semibold leading-snug">{post.title}</h3>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{post.excerpt}</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {post.tags.map((t) => (
+                <span key={t} className="text-xs font-mono text-muted-foreground border border-border rounded px-2 py-1">
+                  {t}
+                </span>
+              ))}
+            </div>
+            <span className="mt-auto pt-5 inline-flex items-center gap-2 text-muted-foreground text-sm font-medium">
+              Coming soon
+            </span>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
