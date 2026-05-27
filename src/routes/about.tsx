@@ -80,11 +80,11 @@ const education = [
 ];
 
 const skillGroups = [
-  { label: "GIS Software", items: ["ArcGIS", "ArcGIS Pro", "QGIS", "Global Mapper"] },
-  { label: "WebGIS & Programming", items: ["Mapbox Integration", "Web Mapping Applications", "Dashboard Design"] },
-  { label: "Remote Sensing", items: ["LULC Classification", "NDVI", "Groundwater Modeling", "Soil Health"] },
-  { label: "Mobile Data Collection", items: ["CommCare", "GPS Field Surveying"] },
-  { label: "Analysis", items: ["MCDA", "AHP", "Network Optimization", "Asset Management"] },
+  { label: "GIS & Remote Sensing", items: ["ArcGIS Pro", "ArcMap", "QGIS", "ERDAS Imagine", "PCI Geomatica", "MapInfo"] },
+  { label: "Database Management", items: ["PostgreSQL", "PostGIS", "Microsoft Access"] },
+  { label: "WebGIS & Development", items: ["WebGIS Development", "React (Basic)", "Supabase", "Spatial Data Publishing"] },
+  { label: "Data Analysis & Visualization", items: ["Microsoft Excel", "Power BI", "Pronto", "MCDA", "AHP"] },
+  { label: "Other Technical Skills", items: ["AutoCAD (Basic)", "Computer Hardware Troubleshooting", "GPS Surveying", "Theodolite & Levelling Instruments (Basic)"] },
 ];
 
 const researchInterests = [
