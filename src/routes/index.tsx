@@ -26,7 +26,7 @@ const skills = [
 ];
 
 function Index() {
-  const featured = projects[0];
+  const featured = projects.find((p) => p.slug === "webgis-municipal-asset-management")!;
   return (
     <>
       {/* Hero */}
