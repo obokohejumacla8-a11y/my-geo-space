@@ -66,8 +66,9 @@ function Contact() {
           <Field label="Email" name="email" type="email" required />
           <Field label="Organization" name="org" />
           <div>
-            <label className="text-xs font-mono uppercase tracking-widest text-muted-foreground">Message</label>
+            <label htmlFor="message" className="text-xs font-mono uppercase tracking-widest text-muted-foreground">Message</label>
             <textarea
+              id="message" name="message"
               required rows={5}
               className="mt-2 w-full rounded-md border border-border bg-input/40 px-3 py-2 text-sm focus:outline-none focus:border-primary"
               placeholder="Tell me about your project, study area and timeline…"

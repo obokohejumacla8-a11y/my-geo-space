@@ -12,10 +12,31 @@ export const Route = createFileRoute("/projects/$slug")({
     meta: loaderData
       ? [
           { title: `${loaderData.project.title} — Hejumacla T. Oboko` },
-          { name: "description", content: loaderData.project.challenge },
+          { name: "description", content: loaderData.project.metaDescription ?? loaderData.project.challenge },
           { property: "og:title", content: loaderData.project.title },
-          { property: "og:description", content: loaderData.project.challenge },
+          { property: "og:description", content: loaderData.project.metaDescription ?? loaderData.project.challenge },
           { property: "og:image", content: loaderData.project.cover },
+          { property: "og:type", content: "article" },
+        ]
+      : [],
+    scripts: loaderData
+      ? [
+          {
+            type: "application/ld+json",
+            children: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CreativeWork",
+              name: loaderData.project.title,
+              description: loaderData.project.metaDescription ?? loaderData.project.challenge,
+              image: loaderData.project.cover,
+              locationCreated: loaderData.project.location,
+              keywords: loaderData.project.tags.join(", "),
+              author: {
+                "@type": "Person",
+                name: "Hejumacla T. Oboko",
+              },
+            }),
+          },
         ]
       : [],
   }),
@@ -62,13 +83,13 @@ function ProjectDetail() {
       <div className="mx-auto max-w-5xl px-6 mt-16 grid md:grid-cols-3 gap-10">
         <aside className="space-y-6 md:sticky md:top-24 self-start">
           <div>
-            <h4 className="font-mono text-xs uppercase tracking-widest text-primary">Tools</h4>
+            <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Tools</h3>
             <ul className="mt-3 space-y-1.5 text-sm">
               {project.tools.map((t) => <li key={t}>{t}</li>)}
             </ul>
           </div>
           <div>
-            <h4 className="font-mono text-xs uppercase tracking-widest text-primary">Tags</h4>
+            <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Tags</h3>
             <div className="mt-3 flex flex-wrap gap-2">
               {project.tags.map((t) => (
                 <span key={t} className="text-xs font-mono border border-border rounded px-2 py-1">{t}</span>
@@ -77,7 +98,7 @@ function ProjectDetail() {
           </div>
           {project.link && (
             <div>
-              <h4 className="font-mono text-xs uppercase tracking-widest text-primary">Link</h4>
+              <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Link</h3>
               <a href={project.link} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-sm text-primary hover:underline break-all">
                 Visit <ExternalLink size={14} />
               </a>
@@ -95,7 +116,7 @@ function ProjectDetail() {
       {/* Gallery */}
       {project.gallery.length > 0 && (
         <div className="mx-auto max-w-6xl px-6 mt-20">
-          <h3 className="font-display text-2xl font-semibold mb-6">Gallery</h3>
+          <h2 className="font-display text-2xl font-semibold mb-6">Gallery</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {project.gallery.map((g) => (
               <figure key={g.src} className="surface-card overflow-hidden">
@@ -117,7 +138,7 @@ function ProjectDetail() {
             <Link key={p.slug} to="/projects/$slug" params={{ slug: p.slug }} className="surface-card overflow-hidden hover-lift group grid grid-cols-[120px_1fr]">
               <img src={p.cover} alt={p.title} loading="lazy" className="h-full w-full object-cover" />
               <div className="p-5">
-                <h4 className="font-display font-semibold">{p.title}</h4>
+                <h3 className="font-display font-semibold">{p.title}</h3>
                 <p className="mt-1 text-xs text-muted-foreground">{p.location}</p>
               </div>
             </Link>
@@ -131,7 +152,7 @@ function ProjectDetail() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section>
-      <h3 className="font-display text-xl font-semibold border-l-2 border-primary pl-3">{title}</h3>
+      <h2 className="font-display text-xl font-semibold border-l-2 border-primary pl-3">{title}</h2>
       <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{children}</p>
     </section>
   );

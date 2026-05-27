@@ -33,6 +33,42 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About — Hejumacla T. Oboko" },
       { property: "og:description", content: "Background, education, research interests and professional philosophy." },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Hejumacla T. Oboko",
+          jobTitle: "GIS Specialist & WebGIS Developer",
+          email: "mailto:oboko.hejumacla8@gmail.com",
+          telephone: "+675 7220 4015",
+          url: "https://hejumacla-portfolio.lovable.app/about",
+          sameAs: ["https://www.linkedin.com/in/hejumacla-oboko"],
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Lae",
+            addressRegion: "Morobe Province",
+            addressCountry: "PG",
+          },
+          alumniOf: {
+            "@type": "CollegeOrUniversity",
+            name: "PNG University of Technology",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ScholarlyArticle",
+          headline: "Spatial Assessment of Groundwater Potential Zones of East New Britain Province, Papua New Guinea",
+          author: { "@type": "Person", name: "Hejumacla T. Oboko" },
+          url: "https://archives.palarch.nl/index.php/jae/article/view/7248",
+          publisher: { "@type": "Organization", name: "PalArch Foundation" },
+        }),
+      },
+    ],
   }),
   component: About,
 });
@@ -452,6 +488,7 @@ function CertificationsSection() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search certifications…"
+            aria-label="Search certifications"
             className="w-full rounded-md border border-border bg-input pl-9 pr-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
           />
         </div>
@@ -469,6 +506,7 @@ function CertificationsSection() {
         <select
           value={String(year)}
           onChange={(e) => setYear(e.target.value === "all" ? "all" : Number(e.target.value))}
+          aria-label="Filter certifications by year"
           className="rounded-md border border-border bg-input px-3 py-2 text-sm text-foreground focus:outline-none focus:border-primary"
         >
           <option value="all">All years</option>
