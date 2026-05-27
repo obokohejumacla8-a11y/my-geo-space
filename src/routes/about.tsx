@@ -205,8 +205,15 @@ const experience = [
     role: "WaSH Consultant (Contract)",
     org: "Evangelical Lutheran Church of Papua New Guinea (ELCPNG) | Lae, PNG",
     points: [
-      "Led WaSH scoping assessments using CommCare mobile data collection across rural PNG.",
-      "Produced E-Coffee community maps supporting smallholder farmer livelihoods.",
+      "Conducted a multi-sectoral scoping for Covid-19 to support the ELCPNG in identifying Covid-19 issues affecting ELCPNG communities, health facilities and institutions. The seven (7) sectors include health, education, food security, WaSH, communications/logistics, psycho-social support (pastoral counselling) and protection. The various sectors share insights to help the ELCPNG Disaster and Emergency Management Committee (DEMC) make sound decisions on the type of intervention they want to support in light of Covid-19 and to draw out a preparedness plan.",
+      "Responsibilities — Conducted multi-sectoral GIS data collection across Morobe, Highlands and Madang Provinces.",
+      "Responsibilities — Assessed and monitored WaSH services for communities.",
+      "Responsibilities — Supported development of Disaster Risk Management Plan.",
+      "Responsibilities — Conducted spatial data collection using GPS and mobile applications.",
+      "Key Achievements — Implemented mobile GIS data collection using CommCare.",
+      "Key Achievements — Produced real-time GIS data dashboards using PowerBI.",
+      "Key Achievements — Contributed to Disaster Risk Management planning.",
+      'Project Title: "Covid-19 Multi-Sectoral Scoping for the Evangelical Lutheran Church of Papua New Guinea (ELCPNG) and Australian Lutheran World Service (ALWS), partners in the Church Partnership Program (CPP)"',
     ],
   },
   {
@@ -436,9 +443,9 @@ function ResumeSection() {
             </div>
           </div>
           <div className="text-sm text-muted-foreground space-y-1.5">
-            <div className="flex items-center gap-2"><MapPin size={14} className="text-primary" /> Lae, Morobe Province, PNG</div>
-            <div className="flex items-center gap-2"><Mail size={14} className="text-primary" /> oboko.hejumacla8@gmail.com</div>
-            <div className="flex items-center gap-2"><Phone size={14} className="text-primary" /> +675 7220 4015</div>
+            <div className="flex items-center gap-2"><MapPin size={14} className="text-primary" />Lae, Morobe Province, PNG</div>
+            <div className="flex items-center gap-2"><Mail size={14} className="text-primary" />oboko.hejumacla8@gmail.com</div>
+            <div className="flex items-center gap-2"><Phone size={14} className="text-primary" />+675 7220 4015</div>
           </div>
         </div>
 
