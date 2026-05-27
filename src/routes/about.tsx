@@ -33,6 +33,42 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About — Hejumacla T. Oboko" },
       { property: "og:description", content: "Background, education, research interests and professional philosophy." },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Hejumacla T. Oboko",
+          jobTitle: "GIS Specialist & WebGIS Developer",
+          email: "mailto:oboko.hejumacla8@gmail.com",
+          telephone: "+675 7220 4015",
+          url: "https://hejumacla-portfolio.lovable.app/about",
+          sameAs: ["https://www.linkedin.com/in/hejumacla-oboko"],
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Lae",
+            addressRegion: "Morobe Province",
+            addressCountry: "PG",
+          },
+          alumniOf: {
+            "@type": "CollegeOrUniversity",
+            name: "PNG University of Technology",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ScholarlyArticle",
+          headline: "Spatial Assessment of Groundwater Potential Zones of East New Britain Province, Papua New Guinea",
+          author: { "@type": "Person", name: "Hejumacla T. Oboko" },
+          url: "https://archives.palarch.nl/index.php/jae/article/view/7248",
+          publisher: { "@type": "Organization", name: "PalArch Foundation" },
+        }),
+      },
+    ],
   }),
   component: About,
 });
