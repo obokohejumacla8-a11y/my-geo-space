@@ -88,6 +88,8 @@ export const projects: Project[] = [
     sdgs: ["SDG 3", "SDG 6"],
     challenge:
       "ELCPNG and the Church Partnership Program urgently needed to assess and spatialize WaSH infrastructure vulnerabilities across 17 districts to optimize COVID-19 relief distribution.",
+    metaDescription:
+      "Spatial mapping of WaSH infrastructure across 17 PNG districts to guide COVID-19 relief and water-source siting decisions.",
     solution:
       "Migrated synchronized cloud raw datasets into a customized desktop GIS workspace and produced interactive analytical charts contrasting population vs. water storage capacity, and latrine condition levels across surveyed facilities.",
     impact:
