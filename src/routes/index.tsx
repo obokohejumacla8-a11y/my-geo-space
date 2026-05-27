@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, MapPin, Layers, Database, BarChart3, Wrench } from "lucide-react";
+import { ArrowRight, MapPin, Layers, Database, BarChart3, Wrench, Building2, Trees, Waves, ShieldCheck } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import pngLandscape from "@/assets/png-landscape.jpg";
 import { projects } from "@/lib/projects";
