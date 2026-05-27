@@ -452,6 +452,7 @@ function CertificationsSection() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search certifications…"
+            aria-label="Search certifications"
             className="w-full rounded-md border border-border bg-input pl-9 pr-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
           />
         </div>
