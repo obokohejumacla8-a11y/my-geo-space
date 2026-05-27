@@ -1,0 +1,18 @@
+# Hejumacla T. Oboko — GIS Portfolio
+
+> Portfolio of Hejumacla T. Oboko, a GIS Specialist, Geospatial Analyst and WebGIS Developer based in Lae, Papua New Guinea. Projects span WebGIS platforms, spatial analysis, remote sensing and field mapping across the Pacific.
+
+## Pages
+
+- [Home](/): Overview of services, featured projects and how GIS contributes to PNG's development.
+- [Projects](/projects): Case studies in WebGIS, cartography, remote sensing and field mapping.
+- [About](/about): Background, education, certifications, research interests and publications.
+- [Contact](/contact): How to get in touch for GIS consulting and WebGIS development.
+
+## Projects
+
+- [Idam Siawi Spatial Assessment](/projects/idam-siawi-spatial-assessment): Four-map cartographic series — locality, drainage, sub-basins and NDVI.
+- [WebGIS for Municipal Asset Management](/projects/webgis-municipal-asset-management): Mapbox + Supabase platform for Lae Urban Municipality.
+- [ELC-PNG COVID-19 WaSH Scoping](/projects/elc-png-wash-scoping): WaSH infrastructure mapping across 17 PNG districts.
+- [Groundwater Potentiality Mapping](/projects/groundwater-potentiality-mapping): Multi-criteria AHP analysis for East New Britain Province.
+- [Morobe E-Coffee Community Mapping](/projects/morobe-ecoffee-community-mapping): Mobile data collection for women coffee farmers.
