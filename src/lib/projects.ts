@@ -8,10 +8,16 @@ import webgisDb from "@/assets/webgis/02-database.png";
 import webgisSchema from "@/assets/webgis/05-schema.png";
 import webgisLogin from "@/assets/webgis/10-login.png";
 import washDistricts from "@/assets/project-wash-districts.jpg";
-import groundwater from "@/assets/project-groundwater.jpg";
-import geomorphology from "@/assets/project-geomorphology.jpg";
-import lulc from "@/assets/project-lulc.jpg";
-import ndvi from "@/assets/project-ndvi.jpg";
+import gwPotentiality from "@/assets/groundwater/potentiality.png";
+import gwLithology from "@/assets/groundwater/lithology.png";
+import gwGeomorphology from "@/assets/groundwater/geomorphology.png";
+import gwSoilTexture from "@/assets/groundwater/soil-texture.png";
+import gwHsg from "@/assets/groundwater/hsg.png";
+import gwRainfall from "@/assets/groundwater/rainfall.png";
+import gwSlope from "@/assets/groundwater/slope.png";
+import gwDrainageNet from "@/assets/groundwater/drainage-network.png";
+import gwDrainageDensity from "@/assets/groundwater/drainage-density.png";
+import gwLineament from "@/assets/groundwater/lineament.png";
 import coffee from "@/assets/project-coffee.jpg";
 import clientDrainageBasin from "@/assets/client-drainage-basin.png";
 import clientDrainageNetwork from "@/assets/client-drainage-network.png";
@@ -114,22 +120,28 @@ export const projects: Project[] = [
     title: "Groundwater Potentiality Mapping",
     subtitle: "Multi-Criteria Spatial Analysis",
     location: "East New Britain Province, PNG",
-    cover: groundwater,
+    cover: gwPotentiality,
     tags: ["Remote Sensing", "MCDA", "AHP", "Weighted Overlay"],
     sdgs: ["SDG 6"],
     challenge:
       "Identifying sustainable groundwater sources to improve community health and inform water resource management.",
     solution:
-      "Integrated lithology, geomorphology, hydrologic soil group, rainfall, slope, drainage density, lineament density, LULC and NDVI layers. Analyzed via MIF and Analytical Hierarchy Process (AHP) to derive normalized weights for a weighted-sum overlay.",
+      "Integrated lithology, geomorphology, hydrologic soil group, soil texture, rainfall, slope, drainage network, drainage density and lineament density layers. Analyzed via MIF and Analytical Hierarchy Process (AHP) to derive normalized weights for a weighted-sum overlay across Gazelle, Kokopo and Pomio districts.",
     impact:
       "Categorized the province into 'Very Poor' to 'Very Good' groundwater potential zones — directly contributing to Clean Water and Sanitation goals and supporting exploration planning.",
     tools: ["ArcGIS", "QGIS", "Remote Sensing", "Multi-Criteria Analysis"],
     link: "https://archives.palarch.nl/index.php/jae/article/view/7248",
     gallery: [
-      { src: groundwater, caption: "Final groundwater potentiality classification map." },
-      { src: geomorphology, caption: "Geomorphology thematic layer." },
-      { src: lulc, caption: "Land Use / Land Cover classification." },
-      { src: ndvi, caption: "NDVI classification map." },
+      { src: gwPotentiality, caption: "Final groundwater potentiality classification — Very Poor to Very Good zones with class distribution." },
+      { src: gwLithology, caption: "Lithology — sedimentary, volcanic and unconsolidated units across East New Britain." },
+      { src: gwGeomorphology, caption: "Geomorphology — coastal plains, dissected hills, karst and volcanic landforms." },
+      { src: gwSoilTexture, caption: "Soil texture — clay, loam, sand and silt classes from soil survey data." },
+      { src: gwHsg, caption: "Hydrologic Soil Group (HSG) — infiltration capacity classes A through D." },
+      { src: gwRainfall, caption: "Mean annual rainfall (mm) — interpolated isohyets across the province." },
+      { src: gwSlope, caption: "Slope (degrees) — derived from SRTM DEM and reclassified into five classes." },
+      { src: gwDrainageNet, caption: "Drainage network — Strahler stream orders 1–5." },
+      { src: gwDrainageDensity, caption: "Drainage density (km/sq km) — recharge potential indicator." },
+      { src: gwLineament, caption: "Lineament density — faults and dykes controlling subsurface flow." },
     ],
   },
   {
