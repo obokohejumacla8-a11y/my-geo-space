@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, MapPin, Layers, Database, Satellite } from "lucide-react";
+import { ArrowRight, MapPin, Layers, Database, Satellite, Trees, Building2, Waves, ShieldCheck } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import pngLandscape from "@/assets/png-landscape.jpg";
 import { projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/")({
