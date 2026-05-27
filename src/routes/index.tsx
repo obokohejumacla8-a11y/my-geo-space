@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, MapPin, Layers, Database, Satellite, Trees, Building2, Waves, ShieldCheck } from "lucide-react";
+import { ArrowRight, MapPin, Layers, Database, BarChart3, Wrench, Building2, Trees, Waves, ShieldCheck } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import pngLandscape from "@/assets/png-landscape.jpg";
 import { projects } from "@/lib/projects";
@@ -19,10 +19,10 @@ export const Route = createFileRoute("/")({
 });
 
 const skills = [
-  { icon: Layers, title: "GIS Software", items: "ArcGIS · ArcGIS Pro · QGIS · Global Mapper" },
-  { icon: Database, title: "WebGIS & Programming", items: "Mapbox · Web Mapping Apps · Dashboards" },
-  { icon: Satellite, title: "Remote Sensing", items: "LULC · NDVI · Groundwater Modeling" },
-  { icon: MapPin, title: "Field & Analysis", items: "CommCare · GPS · MCDA · AHP" },
+  { icon: Layers, title: "GIS & Remote Sensing", items: "ArcGIS Pro · ArcMap · QGIS · ERDAS Imagine · PCI Geomatica · MapInfo" },
+  { icon: Database, title: "Database & WebGIS", items: "PostgreSQL · PostGIS · WebGIS Development · React · Supabase · Spatial Data Publishing" },
+  { icon: BarChart3, title: "Data Analysis & Visualization", items: "Microsoft Excel · Power BI · Pronto · MCDA · AHP" },
+  { icon: Wrench, title: "Field & Technical", items: "GPS Surveying · AutoCAD · Hardware Troubleshooting · Theodolite & Levelling" },
 ];
 
 function Index() {
