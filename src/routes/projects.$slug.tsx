@@ -12,10 +12,31 @@ export const Route = createFileRoute("/projects/$slug")({
     meta: loaderData
       ? [
           { title: `${loaderData.project.title} — Hejumacla T. Oboko` },
-          { name: "description", content: loaderData.project.challenge },
+          { name: "description", content: loaderData.project.metaDescription ?? loaderData.project.challenge },
           { property: "og:title", content: loaderData.project.title },
-          { property: "og:description", content: loaderData.project.challenge },
+          { property: "og:description", content: loaderData.project.metaDescription ?? loaderData.project.challenge },
           { property: "og:image", content: loaderData.project.cover },
+          { property: "og:type", content: "article" },
+        ]
+      : [],
+    scripts: loaderData
+      ? [
+          {
+            type: "application/ld+json",
+            children: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CreativeWork",
+              name: loaderData.project.title,
+              description: loaderData.project.metaDescription ?? loaderData.project.challenge,
+              image: loaderData.project.cover,
+              locationCreated: loaderData.project.location,
+              keywords: loaderData.project.tags.join(", "),
+              author: {
+                "@type": "Person",
+                name: "Hejumacla T. Oboko",
+              },
+            }),
+          },
         ]
       : [],
   }),
