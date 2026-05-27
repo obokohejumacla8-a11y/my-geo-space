@@ -83,13 +83,13 @@ function ProjectDetail() {
       <div className="mx-auto max-w-5xl px-6 mt-16 grid md:grid-cols-3 gap-10">
         <aside className="space-y-6 md:sticky md:top-24 self-start">
           <div>
-            <h4 className="font-mono text-xs uppercase tracking-widest text-primary">Tools</h4>
+            <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Tools</h3>
             <ul className="mt-3 space-y-1.5 text-sm">
               {project.tools.map((t) => <li key={t}>{t}</li>)}
             </ul>
           </div>
           <div>
-            <h4 className="font-mono text-xs uppercase tracking-widest text-primary">Tags</h4>
+            <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Tags</h3>
             <div className="mt-3 flex flex-wrap gap-2">
               {project.tags.map((t) => (
                 <span key={t} className="text-xs font-mono border border-border rounded px-2 py-1">{t}</span>
@@ -98,7 +98,7 @@ function ProjectDetail() {
           </div>
           {project.link && (
             <div>
-              <h4 className="font-mono text-xs uppercase tracking-widest text-primary">Link</h4>
+              <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Link</h3>
               <a href={project.link} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-sm text-primary hover:underline break-all">
                 Visit <ExternalLink size={14} />
               </a>
