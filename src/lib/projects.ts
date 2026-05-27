@@ -18,6 +18,8 @@ import gwSlope from "@/assets/groundwater/slope.png";
 import gwDrainageNet from "@/assets/groundwater/drainage-network.png";
 import gwDrainageDensity from "@/assets/groundwater/drainage-density.png";
 import gwLineament from "@/assets/groundwater/lineament.png";
+import gwLulc from "@/assets/groundwater/lulc.png";
+import gwNdvi from "@/assets/groundwater/ndvi.png";
 import coffee from "@/assets/project-coffee.jpg";
 import clientDrainageBasin from "@/assets/client-drainage-basin.png";
 import clientDrainageNetwork from "@/assets/client-drainage-network.png";
@@ -141,7 +143,9 @@ export const projects: Project[] = [
       { src: gwSlope, caption: "Slope (degrees) — derived from SRTM DEM and reclassified into five classes." },
       { src: gwDrainageNet, caption: "Drainage network — Strahler stream orders 1–5." },
       { src: gwDrainageDensity, caption: "Drainage density (km/sq km) — recharge potential indicator." },
-      { src: gwLineament, caption: "Lineament density — faults and dykes controlling subsurface flow." },
+      { src: gwLineament, caption: "Lineament density (km/sq km) — faults and dykes controlling subsurface flow." },
+      { src: gwLulc, caption: "Land use / land cover — water bodies, dense and low-dense vegetation, built-up and barren land." },
+      { src: gwNdvi, caption: "NDVI classification — built-up, water, barren, low-dense forest and tropical rainforest." },
     ],
   },
   {
