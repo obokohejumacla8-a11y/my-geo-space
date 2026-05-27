@@ -470,6 +470,7 @@ function CertificationsSection() {
         <select
           value={String(year)}
           onChange={(e) => setYear(e.target.value === "all" ? "all" : Number(e.target.value))}
+          aria-label="Filter certifications by year"
           className="rounded-md border border-border bg-input px-3 py-2 text-sm text-foreground focus:outline-none focus:border-primary"
         >
           <option value="all">All years</option>
