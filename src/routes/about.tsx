@@ -15,7 +15,14 @@ import {
   Mail,
   Phone,
   MapPin,
+  ChevronDown,
 } from "lucide-react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 import certGeopng from "@/assets/cert-geopng.jpg";
 import certWebgis from "@/assets/cert-webgis.jpg";
 import certTechgeo from "@/assets/cert-techgeo.png";
