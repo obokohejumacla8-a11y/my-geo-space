@@ -167,7 +167,7 @@ function Index() {
           </Link>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.slice(1).map((p) => (
+          {projects.filter((p) => p.slug !== featured.slug).map((p) => (
             <Link
               key={p.slug}
               to="/projects/$slug"
