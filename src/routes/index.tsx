@@ -7,7 +7,7 @@ import { projects } from "@/lib/projects";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Hejumacla T. Oboko — GIS Specialist & WebGIS Developer" },
+      { title: "Hejumacla T. Oboko — An enthusiast GIS Specialist & WebGIS Developer" },
       { name: "description", content: "Results-oriented GIS Professional building WebGIS platforms, spatial analyses and mobile data workflows across Papua New Guinea." },
     ],
   }),

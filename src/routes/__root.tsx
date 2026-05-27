@@ -50,10 +50,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hejumacla T. Oboko — GIS Specialist & WebGIS Developer" },
-      { name: "description", content: "Portfolio of Hejumacla T. Oboko — GIS Specialist, Geospatial Analyst and WebGIS Developer based in Lae, Papua New Guinea." },
+      { title: "Hejumacla T. Oboko — An enthusiast GIS Specialist & WebGIS Developer" },
+      { name: "description", content: "Portfolio of Hejumacla T. Oboko — An enthusiast GIS Specialist, Geospatial Analyst and WebGIS Developer based in Lae, Papua New Guinea." },
       { name: "author", content: "Hejumacla T. Oboko" },
-      { property: "og:title", content: "Hejumacla T. Oboko — GIS Portfolio" },
+      { property: "og:title", content: "Hejumacla T. Oboko — An enthusiast GIS Specialist & WebGIS Developer" },
       { property: "og:description", content: "WebGIS, spatial analysis, remote sensing and field mapping projects from Papua New Guinea." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
