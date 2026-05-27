@@ -1,7 +1,12 @@
-import webgisDashboard from "@/assets/project-webgis-dashboard.jpg";
-import webgisDb from "@/assets/project-webgis-db.jpg";
-import webgisQuery from "@/assets/project-webgis-query.jpg";
-import webgisAi from "@/assets/project-webgis-ai.jpg";
+import webgisDashboard from "@/assets/webgis/08-dashboard.png";
+import webgisMapView from "@/assets/webgis/03-mapview-dashboard.png";
+import webgisQuery from "@/assets/webgis/01-property-query.png";
+import webgisLayersAnnotated from "@/assets/webgis/04-mapview-annotated.png";
+import webgisLayers from "@/assets/webgis/06-layers.png";
+import webgisAi from "@/assets/webgis/07-ai-analysis.png";
+import webgisDb from "@/assets/webgis/02-database.png";
+import webgisSchema from "@/assets/webgis/05-schema.png";
+import webgisLogin from "@/assets/webgis/10-login.png";
 import washDistricts from "@/assets/project-wash-districts.jpg";
 import groundwater from "@/assets/project-groundwater.jpg";
 import geomorphology from "@/assets/project-geomorphology.jpg";
@@ -60,7 +65,7 @@ export const projects: Project[] = [
     title: "WebGIS for Municipal Asset Management",
     subtitle: "Lae Urban Municipality — Ward 2",
     location: "Lae, Morobe Province, PNG",
-    cover: webgisDashboard,
+    cover: webgisMapView,
     tags: ["WebGIS", "Mapbox", "Supabase", "Dashboard"],
     sdgs: ["SDG 11", "SDG 12"],
     challenge:
@@ -72,10 +77,15 @@ export const projects: Project[] = [
     tools: ["WebGIS", "Mapbox GL", "Supabase", "PostgreSQL/PostGIS", "AI Analytics"],
     link: "https://www.laeurbanmunicipal.com/",
     gallery: [
-      { src: webgisDashboard, caption: "Municipal management dashboard — properties, payments and key metrics." },
-      { src: webgisDb, caption: "Integrated attribute table in Supabase PostgreSQL." },
-      { src: webgisQuery, caption: "Sample query result — property valuation by section." },
-      { src: webgisAi, caption: "AI-powered insight generation over the GIS dataset." },
+      { src: webgisMapView, caption: "Map View — property information panel, parcel layers and key metrics dashboard." },
+      { src: webgisQuery, caption: "Spatial query — properties by section visualised on the map and chart." },
+      { src: webgisLayersAnnotated, caption: "Annotated Map View — base layers, search, layer toggles and AI data analysis entry points." },
+      { src: webgisLayers, caption: "Parcel and building layers — Commercial, Residential, Public, Industrial and Reserved." },
+      { src: webgisDashboard, caption: "Municipal Data Dashboard — properties, tax revenue, ownership and land-use distribution." },
+      { src: webgisAi, caption: "Data Analysis with AI — suggested insight questions over the GIS dataset." },
+      { src: webgisDb, caption: "Supabase PostgreSQL attribute table backing the WebGIS." },
+      { src: webgisSchema, caption: "Relational schema — properties, owners, planning data and tax records." },
+      { src: webgisLogin, caption: "Secure login to the municipal management workspace." },
     ],
   },
   {
