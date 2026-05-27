@@ -185,11 +185,11 @@ const certifications: Certification[] = [
 
 const experience = [
   {
-    period: "2024 – Present",
-    role: "GIS Specialist & WebGIS Developer",
-    org: "Independent · Lae, PNG",
+    period: "2024–2025",
+    role: "WebGIS Project — Master of Philosophy Research",
+    org: "PNG University of Technology · Lae, PNG",
     points: [
-      "Designed and deployed a WebGIS platform for municipal building and land asset management in Lae.",
+      "Designed and deployed a WebGIS platform for municipal building and land asset management in Lae Urban Municipality.",
       "Integrated Mapbox dashboards with AI-assisted spatial querying for non-technical decision-makers.",
     ],
   },
@@ -203,12 +203,21 @@ const experience = [
     ],
   },
   {
-    period: "2019 – 2022",
-    role: "Spatial Analyst — Environment & Resources",
-    org: "Research & Consulting",
+    period: "2021 (June – July)",
+    role: "GIS & Remote Sensing Intern",
+    org: "Field Survey & Mapping Consultancy",
     points: [
-      "Groundwater potential mapping for East New Britain using MCDA & AHP-weighted remote sensing.",
-      "LULC change detection, NDVI monitoring and geomorphology mapping for environmental baselines.",
+      "Assisted in GPS field surveys and data collection for cadastral and topographic mapping projects.",
+      "Supported spatial data processing, georeferencing and map production using ArcGIS and QGIS.",
+    ],
+  },
+  {
+    period: "2019",
+    role: "Final Year Project — Groundwater Potential Assessment",
+    org: "PNG University of Technology",
+    points: [
+      "Conducted MCDA & AHP-weighted remote sensing analysis for groundwater potential mapping in East New Britain Province.",
+      "Published findings in PalArch's Journal of Archaeology of Egypt / Egyptology.",
     ],
   },
 ];
@@ -396,7 +405,7 @@ function ResumeSection() {
             <Briefcase size={18} className="text-primary" />
             <p className="font-mono text-xs uppercase tracking-widest text-primary">/ Resume</p>
           </div>
-          <h2 className="mt-3 font-display text-3xl font-semibold">Professional experience</h2>
+          <h2 className="mt-3 font-display text-3xl font-semibold">Professional GIS experience</h2>
         </div>
         <button
           onClick={handleDownload}
