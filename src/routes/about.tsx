@@ -535,47 +535,71 @@ function CertificationsSection() {
       </p>
 
       <div className="mt-6 grid gap-6 md:grid-cols-3">
-        {filtered.map((c) => (
-          <article key={c.title} className="surface-card overflow-hidden flex flex-col hover-lift">
-            <div className="aspect-[4/3] bg-muted border-b border-border overflow-hidden">
-              <img src={c.image} alt={`${c.title} certificate`} loading="lazy" className="h-full w-full object-cover" />
-            </div>
-            <div className="p-6 flex flex-col gap-3 flex-1">
-              <div className="flex items-center gap-2">
-                <Award size={14} className="text-secondary" />
-                <span className="font-mono text-[10px] uppercase tracking-widest text-secondary">{c.mode} · {c.date}</span>
-              </div>
-              <h3 className="font-display text-lg font-semibold leading-snug">{c.title}</h3>
-              <p className="text-xs text-muted-foreground">{c.issuer}</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">{c.detail}</p>
-              <div className="mt-auto pt-3 border-t border-border space-y-2">
-                {c.credentialId && (
-                  <p className="font-mono text-[10px] text-muted-foreground">ID: {c.credentialId}</p>
-                )}
-                {c.url ? (
-                  <a
-                    href={c.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:gap-2.5 transition-all"
-                  >
-                    Verify credential <ExternalLink size={13} />
-                  </a>
-                ) : (
-                  <span className="inline-flex items-center gap-1.5 text-muted-foreground text-xs">
-                    Verification on request
-                  </span>
-                )}
-              </div>
-            </div>
-          </article>
+        {filtered.slice(0, 3).map((c) => (
+          <CertCard key={c.title} cert={c} />
         ))}
-        {filtered.length === 0 && (
-          <div className="md:col-span-3 surface-card p-10 text-center text-sm text-muted-foreground">
-            No certifications match those filters.
-          </div>
-        )}
       </div>
+
+      {filtered.length > 3 && (
+        <Accordion type="single" collapsible className="mt-6 no-print">
+          <AccordionItem value="more" className="border-none">
+            <AccordionTrigger className="surface-card px-6 py-4 rounded-lg hover:no-underline">
+              <span className="font-display text-base font-semibold">View more certificates</span>
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="mt-4 grid gap-6 md:grid-cols-3">
+                {filtered.slice(3).map((c) => (
+                  <CertCard key={c.title} cert={c} />
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      )}
+
+      {filtered.length === 0 && (
+        <div className="mt-6 surface-card p-10 text-center text-sm text-muted-foreground">
+          No certifications match those filters.
+        </div>
+      )}
     </section>
+  );
+}
+
+function CertCard({ cert: c }: { cert: Certification }) {
+  return (
+    <article className="surface-card overflow-hidden flex flex-col hover-lift">
+      <div className="aspect-[4/3] bg-muted border-b border-border overflow-hidden">
+        <img src={c.image} alt={`${c.title} certificate`} loading="lazy" className="h-full w-full object-cover" />
+      </div>
+      <div className="p-6 flex flex-col gap-3 flex-1">
+        <div className="flex items-center gap-2">
+          <Award size={14} className="text-secondary" />
+          <span className="font-mono text-[10px] uppercase tracking-widest text-secondary">{c.mode} · {c.date}</span>
+        </div>
+        <h3 className="font-display text-lg font-semibold leading-snug">{c.title}</h3>
+        <p className="text-xs text-muted-foreground">{c.issuer}</p>
+        <p className="text-sm text-muted-foreground leading-relaxed">{c.detail}</p>
+        <div className="mt-auto pt-3 border-t border-border space-y-2">
+          {c.credentialId && (
+            <p className="font-mono text-[10px] text-muted-foreground">ID: {c.credentialId}</p>
+          )}
+          {c.url ? (
+            <a
+              href={c.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-primary text-sm font-medium hover:gap-2.5 transition-all"
+            >
+              Verify credential <ExternalLink size={13} />
+            </a>
+          ) : (
+            <span className="inline-flex items-center gap-1.5 text-muted-foreground text-xs">
+              Verification on request
+            </span>
+          )}
+        </div>
+      </div>
+    </article>
   );
 }
