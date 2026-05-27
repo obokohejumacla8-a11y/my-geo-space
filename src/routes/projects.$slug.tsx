@@ -116,7 +116,7 @@ function ProjectDetail() {
       {/* Gallery */}
       {project.gallery.length > 0 && (
         <div className="mx-auto max-w-6xl px-6 mt-20">
-          <h3 className="font-display text-2xl font-semibold mb-6">Gallery</h3>
+          <h2 className="font-display text-2xl font-semibold mb-6">Gallery</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {project.gallery.map((g) => (
               <figure key={g.src} className="surface-card overflow-hidden">
