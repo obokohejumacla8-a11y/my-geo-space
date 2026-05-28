@@ -91,6 +91,7 @@ const skillGroups = [
   { label: "Database Management", items: ["PostgreSQL", "PostGIS", "Microsoft Access"] },
   { label: "WebGIS & Development", items: ["WebGIS Development", "React (Basic)", "Supabase", "Spatial Data Publishing"] },
   { label: "Data Analysis & Visualization", items: ["Microsoft Excel", "Power BI", "Pronto", "MCDA", "AHP"] },
+  { label: "Spatial Analysis", items: ["Geometric & Distance Analysis", "Overlay Analysis", "Surface & Terrain Analysis", "Statistical Analysis", "Network Analysis", "Spatiotemporal Analysis"] },
   { label: "Other Technical Skills", items: ["AutoCAD (Basic)", "Computer Hardware Troubleshooting", "GPS Surveying", "Theodolite & Levelling Instruments (Basic)"] },
 ];
 
