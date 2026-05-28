@@ -22,6 +22,7 @@ const skills = [
   { icon: Layers, title: "GIS & Remote Sensing", items: "ArcGIS Pro · ArcMap · QGIS · ERDAS Imagine · PCI Geomatica · MapInfo" },
   { icon: Database, title: "Database & WebGIS", items: "PostgreSQL · PostGIS · WebGIS Development · React · Supabase · Spatial Data Publishing" },
   { icon: BarChart3, title: "Data Analysis & Visualization", items: "Microsoft Excel · Power BI · Pronto · MCDA · AHP" },
+  { icon: Compass, title: "Spatial Analysis", items: "Geometric & Distance Analysis · Overlay Analysis · Surface & Terrain Analysis · Statistical Analysis · Network Analysis · Spatiotemporal Analysis" },
   { icon: Wrench, title: "Field & Technical", items: "GPS Surveying · AutoCAD · Hardware Troubleshooting · Theodolite & Levelling" },
 ];
 
